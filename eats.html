@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uber Eats | Food Delivery</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .eats-hero {
+            background-image: url('https://images.pexels.com/photos/264636/pexels-photo-264636.jpeg');
+            background-size: cover;
+            background-position: center;
+        }
+        .food-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body class="font-sans">
+    <!-- Header -->
+    <header class="bg-black text-white p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-8">
+                <div class="text-2xl font-bold">UBER</div>
+                <nav class="hidden md:flex space-x-6">
+                    <a href="ride.html" class="hover:text-gray-300">Ride</a>
+                    <a href="eats.html" class="text-green-500">Eats</a>
+                    <a href="#" class="hover:text-gray-300">Drive</a>
+                    <a href="#" class="hover:text-gray-300">Business</a>
+                </nav>
+            </div>
+            <div class="flex items-center space-x-6">
+                <a href="#" class="hover:text-gray-300 hidden md:block">Help</a>
+                <a href="#" class="hover:text-gray-300">Login</a>
+                <a href="#" class="bg-white text-black px-4 py-2 rounded-md hover:bg-gray-200">Sign up</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Eats Hero Section -->
+    <section class="eats-hero h-96 flex items-center">
+        <div class="container mx-auto px-4">
+            <div class="bg-white p-8 rounded-lg shadow-lg max-w-2xl">
+                <h1 class="text-4xl font-bold mb-4">Your favorite food, delivered</h1>
+                <div class="flex">
+                    <input type="text" placeholder="Enter delivery address" class="p-3 border rounded-l w-full">
+                    <button class="bg-black text-white px-6 py-3 rounded-r hover:bg-gray-800">
+                        Find Food
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Restaurants -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 text-center">Popular restaurants near you</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Restaurant 1 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md food-card transition-all duration-300">
+                    <img src="https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg" alt="Italian Restaurant" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-bold">Pasta Palace</h3>
+                            <div class="flex items-center bg-green-100 text-green-800 px-2 py-1 rounded">
+                                <span class="text-sm font-bold">4.8</span>
+                                <i class="fas fa-star ml-1 text-xs"></i>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 my-2">Italian • $$ • 15-25 min</p>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <i class="fas fa-map-marker-alt mr-1"></i>
+                            <span>0.8 miles away</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Restaurant 2 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md food-card transition-all duration-300">
+                    <img src="https://images.pexels.com/photos/2097090/pexels-photo-2097090.jpeg" alt="Burger Joint" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-bold">Burger Barn</h3>
+                            <div class="flex items-center bg-green-100 text-green-800 px-2 py-1 rounded">
+                                <span class="text-sm font-bold">4.6</span>
+                                <i class="fas fa-star ml-1 text-xs"></i>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 my-2">American • $ • 10-20 min</p>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <i class="fas fa-map-marker-alt mr-1"></i>
+                            <span>0.5 miles away</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Restaurant 3 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md food-card transition-all duration-300">
+                    <img src="https://images.pexels.com/photos/1055058/pexels-photo-1055058.jpeg" alt="Sushi Bar" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-bold">Sushi Express</h3>
+                            <div class="flex items-center bg-green-100 text-green-800 px-2 py-1 rounded">
+                                <span class="text-sm font-bold">4.9</span>
+                                <i class="fas fa-star ml-1 text-xs"></i>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 my-2">Japanese • $$$ • 20-30 min</p>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <i class="fas fa-map-marker-alt mr-1"></i>
+                            <span>1.2 miles away</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Same footer as index.html -->
+    <footer class="bg-black text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="font-bold mb-4">Company</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-gray-300">About us</a></li>
+                        <li><a href="#" class="hover:text-gray-300">Our offerings</a></li>
+                        <li><a href="#" class="hover:text-gray-300">Newsroom</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold mb-4">Products</h3>
+                    <ul class="space-y-2">
+                        <li><a href="ride.html" class="hover:text-gray-300">Ride</a></li>
+                        <li><a href="eats.html" class="text-green-500">Eats</a></li>
+                        <li><a href="#" class="hover:text-gray-300">Freight</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold mb-4">Global citizenship</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-gray-300">Safety</a></li>
+                        <li><a href="#" class="hover:text-gray-300">Diversity</a></li>
+                        <li><a href="#" class="hover:text-gray-300">Sustainability</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold mb-4">Social</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="hover:text-gray-300"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="hover:text-gray-300"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="hover:text-gray-300"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <div class="flex space-x-4 mb-4 md:mb-0">
+                    <span>© 2023 Uber Technologies Inc.</span>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="hover:text-gray-300">Privacy</a>
+                    <a href="#" class="hover:text-gray-300">Terms</a>
+                    <a href="#" class="hover:text-gray-300">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
